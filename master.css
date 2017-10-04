@@ -1,0 +1,22 @@
+body { 
+	background-color: #3874ff;
+	font-family: Helvetica;
+	text-align: center;
+	min-width: 600px;
+    color: white;
+    background-image: url("HomePage-Backgrond.jpg");
+    background-position: center top;
+    background-size: cover;
+	
+}
+
+input {
+	text-align: center;
+}
+
+.button {
+	background-color:#ffffff;
+	border:none;
+	color:#3874ff;
+	font-weight:bold;
+}
