@@ -1,0 +1,28 @@
+<html>
+<head>
+
+  <!--       TEMPLATE CREATED FOR CITYPAL 2017
+      Commented by Jacob and Will, Coded by Tom, Tim and Steven
+                      Oct 4, 2017
+                IFB299 Group Seventy-Three              -->
+
+	<title>CityPal</title>
+  <!--using jinja the static files are all linked within the webpage for a dynamic page -->
+  {% load static %}
+	<link href="{% static 'cityPalStatic/master.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <!-- Creating space for the logo -->
+	<table id="logo" align="center" width="300" cellpadding="100">
+		<tr>
+			<th><img src="{% static 'cityPalStatic/CityPalLogo.png' %}" width="300"></th>
+		</tr>
+	</table>
+  <!-- This uses django to determin if a user is either logged in og not -->
+	<table id="loginheader" align="center" width="300">
+    {% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}  <a href="">[logout]</a></p>
+    {% endif %}
+	</table>
+</body>
+</html>
