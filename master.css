@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body { 
 	background-color: #3874ff;
 	font-family: Helvetica;
@@ -19,4 +20,27 @@ input {
 	border:none;
 	color:#3874ff;
 	font-weight:bold;
+=======
+body { 
+	background-color: #3874ff;
+	font-family: Helvetica;
+	text-align: center;
+	min-width: 600px;
+    color: white;
+    background-image: url("HomePage-Backgrond.jpg");
+    background-position: center top;
+    background-size: cover;
+	
+}
+
+input {
+	text-align: center;
+}
+
+.button {
+	background-color:#ffffff;
+	border:none;
+	color:#3874ff;
+	font-weight:bold;
+>>>>>>> abf3a55219def98aa4c4be9b889d4118135dd5cb
 }
