@@ -13,16 +13,39 @@
 </head>
 <body>
   <!-- Creating space for the logo -->
-	<table id="logo" align="center" width="300" cellpadding="100">
+	<table id="search" align="center" width="900" cellpadding="10">
 		<tr>
-			<th><img src="{% static 'cityPalStatic/CityPalLogo.png' %}" width="300"></th>
+			<td>
+			<img src="{% static 'cityPalStatic/CityPalLogo.png' %}" width="200"><br>
+			<!-- This uses django to determin if a user is either logged in or not -->
+			{% if user.is_authenticated %}
+			<p>Welcome, {{ user.username }}  <a href="">[logout]</a></p>
+			{% endif %}
+			</td>
+			<td>
+			<input type="text" name="search" value="" placeholder="SEARCH" style="width: 500px; height: 35px;">
+			</td>
+			<td style="width:200px;">
+			<a href="">LOGOUT</a> / <a href="">HELP</a>
+			</td>
 		</tr>
 	</table>
-  <!-- This uses django to determin if a user is either logged in og not -->
-	<table id="loginheader" align="center" width="300">
-    {% if user.is_authenticated %}
-    <p>Welcome, {{ user.username }}  <a href="">[logout]</a></p>
-    {% endif %}
+	<table id="results" align="center" width="800">
+		<tr>
+			<th>
+			<font size="5">RESULTS:</font>
+			</th>
+			<th>
+			<!-- Space for the map -->
+			</th>
+			<th>
+			<font size="5">REVIEWS:</font>
+			</th>
+		</tr>
+		<tr>
+			<td>
+			.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>
+			</td>
 	</table>
 </body>
 </html>
