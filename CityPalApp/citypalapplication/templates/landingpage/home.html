@@ -15,37 +15,45 @@
   <!-- Creating space for the logo -->
 	<table id="search" align="center" width="900" cellpadding="10">
 		<tr>
-			<td>
+			<td align="center">
 			<img src="{% static 'cityPalStatic/CityPalLogo.png' %}" width="200"><br>
 			<!-- This uses django to determin if a user is either logged in or not -->
 			{% if user.is_authenticated %}
 			<p>Welcome, {{ user.username }}  <a href="">[logout]</a></p>
 			{% endif %}
 			</td>
-			<td>
+			<td align="center">
 			<input type="text" name="search" value="" placeholder="SEARCH" style="width: 500px; height: 35px;">
 			</td>
-			<td style="width:200px;">
+			<td style="width:200px;" align="center">
 			<a href="">LOGOUT</a> / <a href="">HELP</a>
 			</td>
 		</tr>
 	</table>
 	<table id="results" align="center" width="800">
 		<tr>
-			<th>
+			<th align="center">
 			<font size="5">RESULTS:</font>
 			</th>
-			<th>
+			<th align="center">
 			<!-- Space for the map -->
 			</th>
-			<th>
+			<th align="center">
 			<font size="5">REVIEWS:</font>
 			</th>
 		</tr>
 		<tr>
 			<td>
+			<!-- just making the thing longer to make it look better and see if it looks alright lel   -->
 			.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>.<b>
+			<!-- haha-->
 			</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="3">
+			<font size="5">P.O.I:</font>
+			</td>
+		</tr>
 	</table>
 </body>
 </html>
