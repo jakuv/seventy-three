@@ -37,6 +37,62 @@
 			</th>
 			<th align="center" width="500">
 			<!-- Space for the map -->
+			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMkkz5Yg8P7t7nuZrARECaJEaIv-GYw3A"></script>
+			<script language="javascript" type="text/javascript">
+
+				// map variables:
+				var map;
+				var geocoder;
+				// NOTE LAT & LONGITUDE SET TO QUT FOR NOW
+				var lat = -27.477356; 
+				var lng = 153.0284231;
+				
+				function InitializeMap() {
+					// assign Latitude and Longitude to variable for map
+					var latlng = new google.maps.LatLng(lat,lng);
+					// customise options for map
+					var myOptions =
+					{
+						zoom: 12,
+						center: latlng,
+						mapTypeId: google.maps.MapTypeId.ROADMAP,
+						disableDefaultUI: true
+					};
+					map = new google.maps.Map(document.getElementById("map"), myOptions);
+					// customise marker
+					var marker = new google.maps.Marker({
+						animation: google.maps.Animation.BOUNCE,
+						position: latlng,
+						map: map,
+						title: 'hello'
+					});
+				}
+
+				function FindParkLocation() {
+					geocoder = new google.maps.Geocoder();
+					InitializeMap();
+
+					var address = document.getElementById("addressinput").value;
+					geocoder.geocode({ 'address': address }, function (results, status) {
+						if (status == google.maps.GeocoderStatus.OK) {
+							map.setCenter(results[0].geometry.location);
+							var marker = new google.maps.Marker({
+								map: map,
+								position: results[0].geometry.location
+							});
+
+						}
+						else {
+							alert("Geocode was not successful for the following reason: " + status);
+						}
+					});
+
+				}
+
+				window.onload = InitializeMap;
+			</script>
+			
 			</th>
 			<th align="center">
 			<font size="5"><p style="color:#3874ff;">REVIEWS:</p></font>
