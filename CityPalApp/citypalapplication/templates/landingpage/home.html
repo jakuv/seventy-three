@@ -60,9 +60,10 @@
 						disableDefaultUI: true
 					};
 					map = new google.maps.Map(document.getElementById("map"), myOptions);
-					// customise marker
+					// customise marker, get rid of this if we dont need the marker. just set for the same
+					// position as var latlng (currently set as QUT)
 					var marker = new google.maps.Marker({
-						animation: google.maps.Animation.BOUNCE,
+						animation: google.maps.Animation.BOUNCE, //makes the marker bounce haha
 						position: latlng,
 						map: map,
 						title: 'hello'
@@ -71,7 +72,7 @@
 
 				window.onload = InitializeMap;
 			</script>
-			<!-- JavaScipt ends -->
+			<!-- end JavaScipt -->
 			<div id="map" style="height:500px" style="width:700px">
 			</th>
 			<th align="center">
@@ -80,9 +81,9 @@
 		</tr>
 		<tr>
 			<td>
-			<!-- just making the thing longer to make it look better and see if it looks and scrolls alright lel   -->
 			<div style="width: 150px; height: 450px; overflow: auto">
-			.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+			<!-- just making the thing longer to make it look better and see if it looks and scrolls alright lel   -->
+			.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
 			<!-- haha-->
 			</td>
 			<td>
@@ -90,7 +91,8 @@
 			</td>
 		</tr>
 		</table>
-		<table id="poi" align="center" width="800" bgcolor="#ffffff">
+		<br>
+		<table id="poi" align="center" width="1000" bgcolor="#ffffff">
 		<tr>
 			<td align="left">
 			<font size="5"><p style="color:#3874ff;">P.O.I:</p></font>
