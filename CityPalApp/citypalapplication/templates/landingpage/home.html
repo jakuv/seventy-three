@@ -30,13 +30,13 @@
 			</td>
 		</tr>
 	</table>
-	<table id="results" align="center" width="800" bgcolor="#FFFFFF">
+	<table id="results" align="center" width="1000" bgcolor="#FFFFFF">
 		<tr>
 			<th align="center">
 			<font size="5"><p style="color:#3874ff;">RESULTS:</p></font>
 			</th>
-			<th align="center" width="500">
-			<!-- Space for the map -->
+			<th align="center" width="700" rowspan="2">
+			<!-- JavaScript for the map -->
 			
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMkkz5Yg8P7t7nuZrARECaJEaIv-GYw3A"></script>
 			<script language="javascript" type="text/javascript">
@@ -44,7 +44,7 @@
 				// map variables:
 				var map;
 				var geocoder;
-				// NOTE LAT & LONGITUDE SET TO QUT FOR NOW
+				// !!! NB: LAT & LONGITUDE SET TO QUT FOR NOW !!!
 				var lat = -27.477356; 
 				var lng = 153.0284231;
 				
@@ -54,7 +54,7 @@
 					// customise options for map
 					var myOptions =
 					{
-						zoom: 12,
+						zoom: 13,
 						center: latlng,
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 						disableDefaultUI: true
@@ -69,30 +69,10 @@
 					});
 				}
 
-				function FindParkLocation() {
-					geocoder = new google.maps.Geocoder();
-					InitializeMap();
-
-					var address = document.getElementById("addressinput").value;
-					geocoder.geocode({ 'address': address }, function (results, status) {
-						if (status == google.maps.GeocoderStatus.OK) {
-							map.setCenter(results[0].geometry.location);
-							var marker = new google.maps.Marker({
-								map: map,
-								position: results[0].geometry.location
-							});
-
-						}
-						else {
-							alert("Geocode was not successful for the following reason: " + status);
-						}
-					});
-
-				}
-
 				window.onload = InitializeMap;
 			</script>
-			
+			<!-- JavaScipt ends -->
+			<div id="map" style="height:500px" style="width:700px">
 			</th>
 			<th align="center">
 			<font size="5"><p style="color:#3874ff;">REVIEWS:</p></font>
@@ -100,9 +80,13 @@
 		</tr>
 		<tr>
 			<td>
-			<!-- just making the thing longer to make it look better and see if it looks alright lel   -->
+			<!-- just making the thing longer to make it look better and see if it looks and scrolls alright lel   -->
+			<div style="width: 150px; height: 450px; overflow: auto">
 			.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
 			<!-- haha-->
+			</td>
+			<td>
+			<div style="width: 150px; height: 450px; overflow: auto">
 			</td>
 		</tr>
 		</table>
