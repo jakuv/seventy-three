@@ -13,7 +13,7 @@ def register(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/account')
+            return redirect('landingpage/index.html')
     else:
         form = SignUpForm()
 
