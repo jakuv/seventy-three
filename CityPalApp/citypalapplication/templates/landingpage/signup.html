@@ -14,6 +14,10 @@
 			<td align="center"><font size="5">CREATE AN ACCOUNT:<br><br></font></td>
 		</tr>
 	</table>
+
+	<!---getting rid of the HTML form as I dont think we need it but
+			 not deleting it just in case....
+
 	<table id="signup" align="center" width="700" bgcolor="#3874ff" cellpadding="15">
 		<form name="signup" id="idSignup" action="" method="" onsubmit="">
 		<tr>
@@ -45,5 +49,18 @@
 		</tr>
 		</form>
 	</table>
+
+-->
+
+{% block body %}
+<div class="SignUp">
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Submit</button>
+	</form>
+</div>
+{% endblock %}
+
 </body>
 </html>
