@@ -7,9 +7,9 @@ class SignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     class Meta:
-        model = UserProfiles
+        model = UserProfiles ##or model = User
         fields = (
-            'type',
+            'type', # might not work
             'first_name',
             'last_name',
             'email',
