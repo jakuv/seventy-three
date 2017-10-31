@@ -14,9 +14,9 @@ CREATE DATABASE CityPal;
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_type` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL DEFAULT,
   `first_name` varchar(45) NOT NULL,
   `last_name` varchar(45) DEFAULT NULL,
-  `username` varchar(45) NOT NULL DEFAULT,
   `email` varchar(45) NOT NULL DEFAULT,
   `salt` varchar(512) DEFAULT NULL,
   `hash` varchar(512) DEFAULT NULL,
