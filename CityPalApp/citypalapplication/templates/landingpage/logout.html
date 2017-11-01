@@ -1,0 +1,36 @@
+<html>
+<head>
+
+  <!--       TEMPLATE CREATED FOR CITYPAL 2017
+      Commented by Jacob and Will, Coded by Tom, Tim and Steven
+                      Oct 4, 2017
+                IFB299 Group Seventy-Three              -->
+
+	<title>CityPal</title>
+  <!--using jinja the static files are all linked within the webpage for a dynamic page -->
+  {% load static %}
+	<link href="{% static 'cityPalStatic/master.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <!-- Creating space for the logo -->
+	<table id="logo" align="center" width="300" cellpadding="100">
+		<tr>
+			<th><img src="{% static 'cityPalStatic/CityPalLogo.png' %}" width="300"></th>
+		</tr>
+	</table>
+	<table id="loginheader" align="center" width="300">
+		<tr>
+			<td align="center"><font size="6">LOGGED OUT<br><br></font></td>
+		</tr>
+	</table>
+
+  <!-- Setting up the form for users to Login and become verfied -->
+
+	<table id="registerprompt" align="center" width="300" bgcolor="#3874ff" cellpadding="10">
+    <tr><td align="center">You Have Logged Out!</td></tr>
+		<tr>
+			<td align="center"><font size="2">Return to <a href="/citypalapplication/login">Login</a>!</font></td>
+		</tr>
+	</table>
+</body>
+</html>
